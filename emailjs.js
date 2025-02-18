@@ -12,7 +12,7 @@ window.onload = function() {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        emailjs.sendForm("default_service", "contact_form", this).then((response) => {
+        emailjs.sendForm("default_service", "fullstack_contact_form", this).then((response) => {
                 console.log("Message was sent successfully!");
 
                 modalImg.style.display = "block";
