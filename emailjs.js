@@ -9,7 +9,7 @@ const form = document.getElementById("contact-form");
 //----------------------//
 // Send E-mail via EmailJS //
 window.onload = function() {
-    form.addEventListener('submit', function(event) {
+    form.addEventListener("submit", function(event) {
         event.preventDefault();
 
         emailjs.sendForm("contact_jeanjusten", "fullstack_contact_form", this).then((response) => {
