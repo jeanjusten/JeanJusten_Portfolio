@@ -1,0 +1,1 @@
+let observer=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&e.target.classList.add("show")})}),hiddenElements=document.querySelectorAll(".hidden-element");hiddenElements.forEach(e=>observer.observe(e));
