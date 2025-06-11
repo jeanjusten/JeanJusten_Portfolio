@@ -1,0 +1,31 @@
+// All Sass files
+@use "./sass/variables"; 
+@use "./sass/mixins/mixins";
+@use "./sass/reset";
+@use "./sass/loading";
+@use "./sass/buttons";
+@use "./sass/body";
+@use "./sass/animations";
+@use "./sass/scroll";
+@use "./sass/header";
+
+@use "./sass/sections/alertbox.scss"; 
+@use "./sass/sections/home";
+@use "./sass/sections/about";
+@use "./sass/sections/services";
+@use "./sass/sections/portfolio";
+@use "./sass/sections/contact";
+
+// Plans route
+@use "./sass/sections/plans/plans_hero.scss";
+@use "./sass/sections/plans/plans_sobre.scss";
+@use "./sass/sections/plans/plans_planos.scss";
+
+
+@use "./sass/sections/footer";
+
+// Bootstrap Overwrite Variables
+// Text Color
+body, html, h1, h2, h3, h4, h5, h6, p, span, a, li, ul {
+    color: variables.$textColor;
+}

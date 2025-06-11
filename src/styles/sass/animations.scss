@@ -1,0 +1,83 @@
+@use "./variables";
+@use "./mixins/mixins";
+
+
+@keyframes fade-down {
+    from {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+@keyframes fade-up {
+    from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+/*Hero Section text*/
+.animation-up {
+    animation: fade-up 0.8s;
+}
+
+.animation-down {
+    animation: fade-down 0.8s;
+}
+
+/*Scroll animation*/
+.hidden-element {
+    opacity: 0 !important;
+    transition: all 1.5s;
+    filter: blur(5px);
+    contain: layout;
+    will-change: transform;
+}
+
+.translate-left {
+    transform: translatey(-80px);
+}
+
+.translate-right {
+    transform: translatey(80px);
+}
+
+.translate-up {
+    transform: translatey(80px);
+}
+
+.translate-down {
+    transform: translatey(-80px);
+}
+
+.show {
+    opacity: 1 !important;
+    filter: none;
+    transform: translateX(0);
+    transform: translateY(0);
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+/*Sections w/ animations*/
+.fade-up {
+    transition: ease-in-out;
+    animation: fade-up 0.55s ease;
+}
+
+.fade-down {
+    transition: ease-in-out;
+    animation: fade-down 0.55s ease;
+}

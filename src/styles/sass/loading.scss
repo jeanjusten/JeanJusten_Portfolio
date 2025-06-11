@@ -1,0 +1,38 @@
+@use "./variables";
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100svw;
+    height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1a1a1a;
+    z-index: 9999 !important;
+    transition: opacity 0.75s, visibility 0.75s;
+    gap: 10px;
+
+    img {
+        height: 72px;
+        width: auto;
+        display: inline-block;
+        animation: bounce 2s infinite ease-in-out;
+    }
+}
+
+.loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+

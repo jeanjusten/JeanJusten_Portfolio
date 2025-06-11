@@ -1,0 +1,74 @@
+@use "../../variables";
+@use "../../mixins/mixins";
+
+#planos {
+    width: 100%;
+    background-color: grey;
+
+    .container-plans {
+        max-width: 100%;
+    }
+}
+
+.container-price-table {
+    transition: ease-in-out;
+    border: 4px solid variables.$colorCardsPlans;
+
+    &:hover {
+        border: 4px solid variables.$primaryColor;
+    }
+}
+
+.container-price-table {
+    width: 280px;
+    text-align: center;
+    background-color: variables.$colorCardsPlans;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 2rem;
+    //border: 4px solid variables.$primaryColor;
+    color: variables.$colorTextPriceCards !important;
+
+    .container-price-button {
+        margin-top: 1.2rem;
+
+        a {
+            width: 100%;
+        }
+    }
+
+    .plans-features {
+        min-height: 180px;
+
+        div {
+            padding-top: 5px;
+            border-bottom: 1px solid #a9a9a9;
+        }
+
+        .greyed {
+            color: variables.$colorGreyed;
+        }
+    }
+
+    .plans-title {
+        text-transform: uppercase;
+        font-size: variables.$fontSizePrice;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: variables.$colorPriceCards;
+    }
+
+    .plans-price {
+        margin-bottom: 20px;
+        display: block;
+
+        strong {
+            font-size: variables.$fontSizePriceValue;
+            margin-bottom: -5px;
+        }
+
+        span {
+            color: variables.$colorTextPriceCards;
+        }
+    }
+}

@@ -1,0 +1,113 @@
+@use "../variables";
+@use "../mixins/mixins";
+
+#contact {
+    position: relative;
+    color: var(--colorTextPrimary);
+    background-image: url(./images/noisepattern.webp);
+    background-color: var(--colorBody);
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.35) 100%);
+        pointer-events: none; 
+    }
+}
+
+#brand-logo-3 {
+    height: auto;
+    width: auto;
+    max-height: 200px;
+    max-width: 50%;
+    align-self: center;
+    transition: 0.5s ease-in-out;
+}
+
+#brand-logo-3:hover {
+    transform: scale(1.05);
+}
+
+/*FORM*/
+.form {
+    max-width: 450px;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.input-search {
+    outline: none;
+}
+
+.input-group {
+    position: relative;
+
+    .input-group-text {
+        z-index: 99;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        width: 2.5rem; 
+        height: 2.5rem; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem; 
+    }
+
+    .form-control {
+        padding-left: 3rem; 
+    }
+}
+
+.msg-control {
+    padding-left: 1rem; 
+}
+
+.svg-icon{
+    color: variables.$colorIcons;
+}
+
+/* Input */
+input:focus, textarea:focus {
+    outline: 2px solid variables.$primaryColor;
+    box-shadow: 0 0 5px variables.$primaryColor;
+}
+
+input, textarea {
+    outline: 2px solid variables.$colorOutlineInput;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.35);
+}
+
+input:not(:placeholder-shown):valid {
+    outline-color: variables.$colorValid;
+}
+
+input:not(:placeholder-shown):invalid {
+    outline-color: variables.$colorInvalid;
+}
+
+input:focus:valid {
+    outline-color: variables.$colorValid;
+}
+
+input:focus:invalid {
+    outline-color: variables.$colorWarning;
+}
+
+select option[value=""][disabled] {
+    color: variables.$disabledInput !important;
+}
+
+#send-form-btn {
+    width: 100%;
+}

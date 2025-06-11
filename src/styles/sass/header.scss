@@ -1,0 +1,131 @@
+@use "./variables";
+@use "./mixins/mixins";
+
+header {
+    z-index: 999 !important;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: variables.$headerColor;
+}
+
+.navbar-wrapper {
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    background-color: variables.$headerColor;
+}
+
+.navbar {
+    z-index: 100 !important;
+    align-items: center;
+    vertical-align: center;
+}
+
+.nav-link.active {
+    color: variables.$headerActiveTextColor !important;
+    background-color: transparent !important;
+    border-bottom: 5px solid variables.$headerActiveTextColor !important;
+    border-radius: 0px;
+}
+
+@media (max-width: 991px) {
+    header {
+        background-color: variables.$headerColorSmall;
+    }
+
+    .nav-link.active {
+        border-bottom: 3px solid variables.$headerActiveTextColor !important;
+        background-color: transparent !important;
+    }
+}
+
+.nav-link {
+    text-align: center;
+    margin-left: 20px;
+    padding-top: 0px;
+    padding-bottom: 0;
+
+    &:hover {
+        color: variables.$buttonColorHover !important;
+    }
+}
+
+#brand-logo {
+    max-height: 22px;
+    padding-top: 0px;
+    padding-bottom: 0px !important;
+    margin-left: 0px;
+    margin-top: 15px;
+    height: auto;
+    width: auto;
+    transition: ease-in-out 0.5s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.cta-nav {
+    margin-top: 5px;
+
+    & a {
+        background-color: variables.$primaryColor;
+        color: variables.$textColor;
+        font-family: variables.$mainFont;
+        font-weight: 100;
+        font-weight: bold;
+        text-decoration: none;
+        padding: .4rem 2rem;
+        transition: linear 0.2s;
+
+        &:hover {
+            background-color: variables.$primaryColor;
+            color: variables.$textColor;
+        }
+    }
+}
+
+.nav-link-cta {
+    text-align: center;
+    margin-left: 20px;
+    padding-bottom: 0;
+}
+
+.nav-item a {
+    color: variables.$headerTextColor;
+    font-family: variables.$mainFont;
+    border-bottom: 1px;
+}
+
+.nav-tabs button {
+    color: variables.$headerTextColor;
+    text-decoration: none;
+}
+
+.tab-content {
+    color: variables.$headerTextColor;
+}
+
+.nav-pills {
+    display: flex;
+    align-items: center !important;
+    align-content: center;
+}
+
+// Navbar icon Color
+.navbar-toggler {
+  border: none;
+
+    .navbar-toggler-icon {
+    background-image: url(
+        "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"
+        );
+    }
+}
+
+
+
+
+

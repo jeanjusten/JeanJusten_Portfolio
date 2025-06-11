@@ -1,0 +1,75 @@
+// Primary Colors
+$primaryColor: #077afa;
+$secondaryColor: #81beff;
+// Body Colors
+$bodyColorPrimary: #1c1c1c;
+$bodyColorSecondary: #2c2c2c; 
+$bodyColorTertiary: #242424; 
+// Text Colors
+$textColor: white;
+$textColorSec: black;
+$textColorAlternate: #dfdfdf;
+// Fonts
+$mainFont: "Special Gothic Condensed One", sans-serif;
+$secondaryFont: "Oswald", sans-serif;
+// Header Colors
+$headerColor: #1c1c1c;
+$headerColorSmall: #1c1c1c;
+$headerTextColor: $textColor;
+$headerActiveColor: $primaryColor;
+$headerActiveTextColor: $primaryColor;
+// Button Colors
+$buttonColor: $primaryColor;
+$buttonColorHover: $secondaryColor;
+$buttonColorHero: #000000;
+$buttonColorHeroHover: transparent;
+// Scroll Colors
+$colorScroll: $primaryColor;
+$colorScrollBg: #1c1c1c;
+$colorScrollThumb: #1c1c1c;
+$colorScrollThumbHover: #1c1c1c;
+// Partners Avatars
+$avatars-count: 3;
+$avatar-size: 44px;
+$column-size-default: calc($avatar-size / 2);
+$column-size-hover: calc($avatar-size * 1.5);
+$colorAvatarBorder: $textColor;
+$colorAvatarBorderActive: $primaryColor;
+$colorAvatarText: $primaryColor;
+// Footer Colors
+$colorFooterPrimary: #2c2c2c; 
+$colorFooterSec: $primaryColor;
+$colorFooterBorder: #d3d3d3;
+$colorFooterText: #ffffff;
+$devbyColor: #fbfbfb;
+$devbyColorHover: #2e86f3;
+// SVG Colors
+$svgColor: $primaryColor;
+$svgColorSec: $textColor;
+$svgColorHover: $secondaryColor;
+// Loader Colors
+$loaderDotColor: #ffffff;
+$loaderBgColor: #1a1a1a; 
+// Form Colors
+$colorWarning: #fd3318;
+$colorValid: #26e026;
+$colorInvalid: #ffa318;
+$colorIcons: #9c9ccf;
+$colorOutlineInput: #ebebeb;
+$disabledInput: #aaa;
+
+// Plans Font Size - Card Description
+$cardDescriptionFontSize: 0.85rem;
+// Plans Prices Cards
+$fontSizePrice: 1.1rem;
+$fontSizePriceValue: 2.05rem;
+$colorCardsPlans: #d0d0d0;
+$colorPriceCards: #464646;
+$colorTextPriceCards: #000000;
+$colorGreyed: #919191;
+// Plans Page Colors
+$colorMottoPlans: $primaryColor;
+// Hero Cards Colors
+$colorCardHeroText: $textColor;
+$colorCardHeroBg: #ff1c1c;
+$colorCardHeroBg2:#3153e9;
