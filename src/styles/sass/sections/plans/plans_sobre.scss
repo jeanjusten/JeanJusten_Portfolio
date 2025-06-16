@@ -5,6 +5,9 @@
     width: 100%;
     min-height: 550px;
     background-color: variables.$bodyColorPrimary;
+    background-image: url("../../../build/dist/img/noise_bg.webp");
+    background-repeat: repeat;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 
     .container-sobre {
         max-width: 100%;
@@ -29,7 +32,7 @@
         animation: show-overflow 2s forwards;
     }
 
-     &:not(:hover) .card-article-data {
+    &:not(:hover) .card-article-data {
         animation: remove-data 1s forwards;
     }
     

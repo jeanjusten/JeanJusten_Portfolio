@@ -10,5 +10,10 @@ const observer = new IntersectionObserver((entries) => { // Handles the visibili
     })
 })
 
+// Refresh Bootstrap Scrollspy
+document.addEventListener("DOMContentLoaded", function () {
+    bootstrap.ScrollSpy.getInstance(document.body)?.refresh();
+});
+
 const hiddenElements = document.querySelectorAll(".hidden-element");
 hiddenElements.forEach((el) => observer.observe(el)); // Observe all elements

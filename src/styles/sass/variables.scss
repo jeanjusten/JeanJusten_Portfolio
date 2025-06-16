@@ -1,6 +1,6 @@
 // Primary Colors
 $primaryColor: #077afa;
-$secondaryColor: #81beff;
+$secondaryColor: #55b0fa;
 // Body Colors
 $bodyColorPrimary: #1c1c1c;
 $bodyColorSecondary: #2c2c2c; 
@@ -29,7 +29,7 @@ $colorScrollBg: #1c1c1c;
 $colorScrollThumb: #1c1c1c;
 $colorScrollThumbHover: #1c1c1c;
 // Partners Avatars
-$avatars-count: 3;
+$avatars-count: 4;
 $avatar-size: 44px;
 $column-size-default: calc($avatar-size / 2);
 $column-size-hover: calc($avatar-size * 1.5);
@@ -37,7 +37,7 @@ $colorAvatarBorder: $textColor;
 $colorAvatarBorderActive: $primaryColor;
 $colorAvatarText: $primaryColor;
 // Footer Colors
-$colorFooterPrimary: #2c2c2c; 
+$colorFooterPrimary: #242424; 
 $colorFooterSec: $primaryColor;
 $colorFooterBorder: #d3d3d3;
 $colorFooterText: #ffffff;
@@ -71,5 +71,5 @@ $colorGreyed: #919191;
 $colorMottoPlans: $primaryColor;
 // Hero Cards Colors
 $colorCardHeroText: $textColor;
-$colorCardHeroBg: #ff1c1c;
+$colorCardHeroBg: #363636;
 $colorCardHeroBg2:#3153e9;

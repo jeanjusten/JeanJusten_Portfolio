@@ -5,4 +5,10 @@ body {
     margin: 0;
     overflow-x: hidden;
     background-color: variables.$bodyColorPrimary;
+    overflow-y: auto;
+    height: auto;
+
+    background-color: variables.$bodyColorPrimary;
+    background-image: url("../../../build/dist/img/noise_bg.webp");
+    background-repeat: repeat;
 }

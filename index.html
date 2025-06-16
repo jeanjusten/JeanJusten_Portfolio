@@ -46,237 +46,239 @@
     <script defer src="./build/dist/scripts/scrollspy.js"></script>
     <script defer src="./build/dist/scripts/parallax.js"></script>
 </head>
-<body data-bs-spy="scroll" data-bs-target="#header-nav" data-bs-offset="100" tabindex="0">
-    <!--PAGE LOADER-->
-    <div class="loader">
-        <img src="./build/dist/img/logo_loader.webp" alt="logo">
-    </div>
-
-    <!--ALERT BOX-->
-    <div id="custom-alert-box" class="custom-alert">
-        <div class="custom-alert-content">
-            <span class="close">&times;</span>
-            <div class="d-flex flex-column justify-content-center">
-                <!--
-                <img src="./images/jj_logo.webp" alt="Jean Justen's logo" id="brand-logo-popup" draggable="false" class="pb-1 mb-3">
-                -->
-                <p id="alert-message">
-                </p>
-            </div>
+<body>
+    <div data-bs-spy="scroll" data-bs-target="#header-nav" data-bs-offset="100" tabindex="0">
+        <!--PAGE LOADER-->
+        <div class="loader">
+            <img src="./build/dist/img/logo_loader.webp" alt="logo">
         </div>
-    </div>
 
-    <!--NAVBAR ACTIVE LINK SPY-->
-    <header id="header-nav-plans">
-        <div class="navbar-wrapper">
-            <div class="navbar navbar-expand-lg" id="header-nav-height">
-                <div class="container pt-1">
-                    <img src="./build/dist/img/logo_esc_white.webp" alt="Logo" id="brand-logo" draggable="false" class="pb-1">
-                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-dropdown">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <nav class="collapse navbar-collapse justify-content-end" id="menu-dropdown">
-                        <ul class="nav navbar-nav nav-pills">
-                            <li class="nav-item"><a href="#home" class="nav-link active fs-5">home</a></li>
-                            <li class="nav-item"><a href="#about" class="nav-link fs-5">about</a></li>
-                            <li class="nav-item"><a href="#services" class="nav-link fs-5">services</a></li>
-                            <li class="nav-item"><a href="#portfolio" class="nav-link fs-5">portfolio</a></li>
-                            <li class="nav-item"><a href="#contact" class="nav-link fs-5">contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!--HERO SECTION-->
-    <main id="home">
-        <div class="banner" id="parallax">
-            <div class="text-hero-wrapper">
-                <div class="container container-parallax">
-                    <div class="bg bg-0"></div>
-                    <div class="bg bg-1"></div>
-                    <div class="bg bg-2"></div>
-                    <div class="bg bg-3"></div>
-                    <div class="bg bg-4"></div>
-                    <div class="bg bg-5"></div>
-                    <div class="bg bg-6"></div>
-                    <div class="motto d-flex flex-column justify-content-center mx-auto">
-                        <p class="text-start motto-p1">Hello! Im</p>
-                        <h1 class="text-uppercase text-center mx-auto">Jean Justen</h1>
-                        <p class="text-end motto-p2">Front-end dev.</p>
-                    </div>
-                    <div class="bg bg-7 d-flex">
-                        <a href="https://github.com/jeanjusten" target="_blank" title="Github.com/jeanjusten">
-                            <img src="./build/dist/img/card1_back.webp" alt="Github">
-                        </a>
-                        <a href="https://www.linkedin.com/in/jeanjusten/" target="_blank" title="LinkedIn.com/jeanjusten">
-                            <img src="./build/dist/img/card1_back.webp" alt="LinkedIn">
-                        </a>
-                        <a href="https://www.instagram.com/jeanjusten" target="_blank" title="Instagram.com/jeanjusten">
-                            <img src="./build/dist/img/card1_back.webp" alt="Instagram">
-                        </a>
-                        <a href="https://www.tiktok.com/@jean_justen" target="_blank" title="TikTok.com/@jean_justen">
-                            <img src="./build/dist/img/card1_back.webp" alt="TikTok">
-                        </a>
-                    </div>
-                    <div class="bg bg-8"></div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <!--ABOUT SECTION-->
-    <section id="about">
-        <div class="container d-sm-block d-md-block d-lg-flex mt-5">
-            <!--Content-->
-            <div class="">
-                <div class="container-sections hidden-element translate-left">
-                    <h2 class="text text-center h2 title-rec-bg">About me</h2>
-                </div>
-                <div class=" hidden-element translate-up">
-                    <p class="mx-auto text text center">
-                        Hello! My name is <strong>Jean</strong>. Im 33 years old, living in Brazil 🇧🇷. <br>
-                    Currently, im a Front-end developer (studying to become a Full-stack), and i have made multiple Landing Pages and personal web-sites as a Freelancer.
-                    I have a design background as well, so i can deal with website layouts and image manipulation.<br>
-                    <br>
-                    Im looking for a full-remote job at the moment, and im sure i have a lot to add to your company.<br> 
-                    The main stacks i use are HTML, CSS, JS, React, Bootstrap, SASS and Gulp for automating tasks. I can also work with API calls, and use NodeJS, Express, LESS and Grunt.
+        <!--ALERT BOX-->
+        <div id="custom-alert-box" class="custom-alert">
+            <div class="custom-alert-content">
+                <span class="close">&times;</span>
+                <div class="d-flex flex-column justify-content-center">
+                    <!--
+                    <img src="./images/jj_logo.webp" alt="Jean Justen's logo" id="brand-logo-popup" draggable="false" class="pb-1 mb-3">
+                    -->
+                    <p id="alert-message">
                     </p>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!--SERVICES SECTION-->
-    <section id="services">
-    </section>
-
-    <!--PORTFOLIO SECTION-->
-    <section id="portfolio">
-    </section>
-
-    <!--CONTACT SECTION-->
-    <section id="contact" class="mt-5 pb-5">
-        <!--Content-->
-        <div class="container d-block">
-            <div class="d-flex flex-column">
-                <div class="container-sections hidden-element translate-down">
-                    <h2 class="text text-center h2 animation-up title-rec-bg">Contact</h2>
+        <!--NAVBAR ACTIVE LINK SPY-->
+        <header id="header-nav">
+            <div class="navbar-wrapper">
+                <div class="navbar navbar-expand-lg" id="header-nav-height">
+                    <div class="container pt-1">
+                        <img src="./build/dist/img/logo_esc_white.webp" alt="Logo" id="brand-logo" draggable="false" class="pb-1">
+                        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-dropdown">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <nav class="collapse navbar-collapse justify-content-end" id="menu-dropdown">
+                            <ul class="nav navbar-nav nav-pills">
+                                <li class="nav-item"><a href="#home" class="nav-link active fs-5">home</a></li>
+                                <li class="nav-item"><a href="#about" class="nav-link fs-5">about</a></li>
+                                <li class="nav-item"><a href="#services" class="nav-link fs-5">services</a></li>
+                                <li class="nav-item"><a href="#portfolio" class="nav-link fs-5">portfolio</a></li>
+                                <li class="nav-item"><a href="#contact" class="nav-link fs-5">contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-                <h2 class="mx-auto text text-center h2 hidden-element translate-right">How can i help you?</h2>
-                <p class="mx-auto text hidden-element translate-right">
-                    Send me a message describing what you need.
-                </p>
             </div>
+        </header>
+
+        <!--HERO SECTION-->
+        <main id="home">
+            <div class="banner" id="parallax">
+                <div class="text-hero-wrapper">
+                    <div class="container container-parallax">
+                        <div class="bg bg-0"></div>
+                        <div class="bg bg-1"></div>
+                        <div class="bg bg-2"></div>
+                        <div class="bg bg-3"></div>
+                        <div class="bg bg-4"></div>
+                        <div class="bg bg-5"></div>
+                        <div class="bg bg-6"></div>
+                        <div class="motto d-flex flex-column justify-content-center mx-auto">
+                            <p class="text-start motto-p1">Hello! Im</p>
+                            <h1 class="text-uppercase text-center mx-auto">Jean Justen</h1>
+                            <p class="text-end motto-p2">Front-end dev.</p>
+                        </div>
+                        <div class="bg bg-7 d-flex">
+                            <a href="https://github.com/jeanjusten" target="_blank" title="Github.com/jeanjusten">
+                                <img src="./build/dist/img/card1_back.webp" alt="Github">
+                            </a>
+                            <a href="https://www.linkedin.com/in/jeanjusten/" target="_blank" title="LinkedIn.com/jeanjusten">
+                                <img src="./build/dist/img/card1_back.webp" alt="LinkedIn">
+                            </a>
+                            <a href="https://www.instagram.com/jeanjusten" target="_blank" title="Instagram.com/jeanjusten">
+                                <img src="./build/dist/img/card1_back.webp" alt="Instagram">
+                            </a>
+                            <a href="https://www.tiktok.com/@jean_justen" target="_blank" title="TikTok.com/@jean_justen">
+                                <img src="./build/dist/img/card1_back.webp" alt="TikTok">
+                            </a>
+                        </div>
+                        <div class="bg bg-8"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!--ABOUT SECTION-->
+        <section id="about">
+            <div class="container d-sm-block d-md-block d-lg-flex mt-5">
+                <!--Content-->
+                <div class="">
+                    <div class="container-sections hidden-element translate-left">
+                        <h2 class="text text-center h2 title-rec-bg">About me</h2>
+                    </div>
+                    <div class=" hidden-element translate-up">
+                        <p class="mx-auto text text center">
+                            Hello! My name is <strong>Jean</strong>. Im 33 years old, living in Brazil 🇧🇷. <br>
+                        Currently, im a Front-end developer (studying to become a Full-stack), and i have made multiple Landing Pages and personal web-sites as a Freelancer.
+                        I have a design background as well, so i can deal with website layouts and image manipulation.<br>
+                        <br>
+                        Im looking for a full-remote job at the moment, and im sure i have a lot to add to your company.<br> 
+                        The main stacks i use are HTML, CSS, JS, React, Bootstrap, SASS and Gulp for automating tasks. I can also work with API calls, and use NodeJS, Express, LESS and Grunt.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--SERVICES SECTION-->
+        <section id="services">
+        </section>
+
+        <!--PORTFOLIO SECTION-->
+        <section id="portfolio">
+        </section>
+
+        <!--CONTACT SECTION-->
+        <section id="contact" class="mt-5 pb-5">
             <!--Content-->
-            <div class="container">
-                <form class="mx-0 form mx-auto animation-up" id="contact-form">
-                    <label for="user_name" class="form-label">
-                        Name:
-                    </label>
-                    <div class="mb-3">
-                        <div class="input-group">
-                            <span class="input-group-text">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person svg-icon" viewBox="0 0 16 16">
-                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
-                                </svg>
-                            </span>
-                            <input type="text" class="form-control" placeholder="Your name here" id="name" name="user_name" title="Insira seu nome completo" minlength="2" required>
-                        </div>
+            <div class="container d-block">
+                <div class="d-flex flex-column">
+                    <div class="container-sections hidden-element translate-down">
+                        <h2 class="text text-center h2 animation-up title-rec-bg">Contact</h2>
                     </div>
-                    <label for="user_email" class="form-label">
-                        E-mail:
-                    </label>
-                    <div class="mb-3">
-                        <div class="input-group">
-                            <span class="input-group-text">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope svg-icon" viewBox="0 0 16 16">
-                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
-                                </svg>
-                            </span>
-                            <input type="email" class="form-control" placeholder="sample@email.com" id="email" name="user_email" title="Insira seu e-mail" required>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <div class="form-group my-4">
-                            <label for="message" class="form-label">
-                                Message:
-                            </label>
-                            <textarea class="form-control msg-control" name="message" id="message-area" rows="5" placeholder="Your message here"></textarea>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-center align-items-center">
-                        <button type="submit" class="btn btn-primary" id="send-form-btn">Send</button>
-                    </div>
+                    <h2 class="mx-auto text text-center h2 hidden-element translate-right">How can i help you?</h2>
+                    <p class="mx-auto text hidden-element translate-right">
+                        Send me a message describing what you need.
+                    </p>
                 </div>
-            </form>
-        </div>
-    </section>
-    
-    <!--FOOTER SECTION-->
-    <footer class="text-center text-lg-start bg-body-tertiary text-muted footer-body">
-        <section class="d-flex justify-content-center justify-content-lg-between p-3 border-bottom" id="info">
-            <div class="me-5 d-none d-lg-block mt-1">
-                <span class="follow-us-footer">Follow, or contact me:</span>
-            </div>
-            <div id="footer-social-links">
-                <a href="javascript:void(0)" target="_blank" title="Instagram" id="contact-instagram-svg" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-                    </svg>
-                </a>
-                <a href="javascript:void(0)" target="_blank" title="Whatsapp" id="contact-whatsapp-svg" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
-                        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
-                    </svg>
-                </a>
+                <!--Content-->
+                <div class="container">
+                    <form class="mx-0 form mx-auto animation-up" id="contact-form">
+                        <label for="user_name" class="form-label">
+                            Name:
+                        </label>
+                        <div class="mb-3">
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person svg-icon" viewBox="0 0 16 16">
+                                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                                    </svg>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Your name here" id="name" name="user_name" title="Insira seu nome completo" minlength="2" required>
+                            </div>
+                        </div>
+                        <label for="user_email" class="form-label">
+                            E-mail:
+                        </label>
+                        <div class="mb-3">
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope svg-icon" viewBox="0 0 16 16">
+                                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                                    </svg>
+                                </span>
+                                <input type="email" class="form-control" placeholder="sample@email.com" id="email" name="user_email" title="Insira seu e-mail" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-group my-4">
+                                <label for="message" class="form-label">
+                                    Message:
+                                </label>
+                                <textarea class="form-control msg-control" name="message" id="message-area" rows="5" placeholder="Your message here"></textarea>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <button type="submit" class="btn btn-primary" id="send-form-btn">Send</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </section>
-        <section id="info-container" class="pt-5">
-            <div class="container text-center text-md-start">
-                <div class="row">
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 text-center" id="footer-info">
-                        <img src="./build/dist/img/logo_full_footer.webp" draggable="false" alt="Jean Justen's logo" id="footer-logo">
-                        <p class="text-capitalize mb-4">
-                            Front-End dev.
-                        </p>
-                    </div>
-                    <!--Section Column-->
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 footer-menu1">
-                        <p class="text-uppercase fw-bold mb-4">
-                            Links
-                        </p>
-                        <p>
-                            <a href="https://www.linkedin.com/in/jeanjusten/" class="text-reset" target="_blank">LinkedIn</a>
-                        </p>
-                        <p>
-                            <a href="javascript:void(0)" id="contact-instagram-footer" class="text-reset" target="_blank">Instagram</a>
-                        </p>
-                        <p>
-                            <a href="javascript:void(0)" id="contact-whatsapp-footer" class="text-reset" target="_blank">Whatsapp</a>
-                        </p>
-                        <p>
-                            <a href="https://www.tiktok.com/@jean_justen" class="text-reset" target="_blank">TikTok</a>
-                        </p>
-                    </div>
-                    <!--Section Column-->
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <p class="contact-footer">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pin-map" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8z"/>
-                                <path fill-rule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z"/>
-                            </svg>
-                            São Mateus do Sul - PR, 83900-092, Brasil
-                        </p>
+        
+        <!--FOOTER SECTION-->
+        <footer class="text-center text-lg-start bg-body-tertiary text-muted footer-body">
+            <section class="d-flex justify-content-center justify-content-lg-between p-3 border-bottom" id="info">
+                <div class="me-5 d-none d-lg-block mt-1">
+                    <span class="follow-us-footer">Follow, or contact me:</span>
+                </div>
+                <div id="footer-social-links">
+                    <a href="javascript:void(0)" target="_blank" title="Instagram" id="contact-instagram-svg" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                        </svg>
+                    </a>
+                    <a href="javascript:void(0)" target="_blank" title="Whatsapp" id="contact-whatsapp-svg" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                        </svg>
+                    </a>
+                </div>
+            </section>
+            <section id="info-container" class="pt-5">
+                <div class="container text-center text-md-start">
+                    <div class="row">
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 text-center" id="footer-info">
+                            <img src="./build/dist/img/logo_full_footer.webp" draggable="false" alt="Jean Justen's logo" id="footer-logo">
+                            <p class="text-capitalize mb-4">
+                                Front-End dev.
+                            </p>
+                        </div>
+                        <!--Section Column-->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 footer-menu1">
+                            <p class="text-uppercase fw-bold mb-4">
+                                Links
+                            </p>
+                            <p>
+                                <a href="https://www.linkedin.com/in/jeanjusten/" class="text-reset" target="_blank">LinkedIn</a>
+                            </p>
+                            <p>
+                                <a href="javascript:void(0)" id="contact-instagram-footer" class="text-reset" target="_blank">Instagram</a>
+                            </p>
+                            <p>
+                                <a href="javascript:void(0)" id="contact-whatsapp-footer" class="text-reset" target="_blank">Whatsapp</a>
+                            </p>
+                            <p>
+                                <a href="https://www.tiktok.com/@jean_justen" class="text-reset" target="_blank">TikTok</a>
+                            </p>
+                        </div>
+                        <!--Section Column-->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <p class="contact-footer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pin-map" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8z"/>
+                                    <path fill-rule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z"/>
+                                </svg>
+                                São Mateus do Sul - PR, 83900-092, Brasil
+                            </p>
+                        </div>
                     </div>
                 </div>
+            </section>
+            <!-- Copyright -->
+            <div class="text-center p-1" id="footer-foot-note">
+                <span>©2025 Jean Justen - All rights reserved.</span>
             </div>
-        </section>
-        <!-- Copyright -->
-        <div class="text-center p-1" id="footer-foot-note">
-            <span>©2025 Jean Justen - All rights reserved.</span>
-        </div>
-    </footer>
+        </footer>
+    </div>
 </body>
 </html>

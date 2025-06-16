@@ -3,8 +3,7 @@
 * {
     padding: 0;
     margin: 0;
-    scroll-behavior: smooth;
-    scroll-padding-top: 57px;
+    //scroll-padding-top: 57px;
     font-family: variables.$secondaryFont;
     box-sizing: border-box;
 }
@@ -12,6 +11,7 @@
 html {
     max-width: 100% !important;
     overflow-x: hidden !important;
+    scroll-behavior: smooth;
 }
 
 img {

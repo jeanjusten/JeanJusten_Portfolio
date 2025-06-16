@@ -3,7 +3,10 @@
 
 #planos {
     width: 100%;
-    background-color: grey;
+    background-color: variables.$bodyColorSecondary;
+    background-image: url("../../../build/dist/img/noise_bg.webp");
+    background-repeat: repeat;
+    
 
     .container-plans {
         max-width: 100%;

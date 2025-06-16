@@ -1,1 +1,1 @@
-let observer=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&e.target.classList.add("show")})}),hiddenElements=document.querySelectorAll(".hidden-element");hiddenElements.forEach(e=>observer.observe(e));
+let observer=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&e.target.classList.add("show")})}),hiddenElements=(document.addEventListener("DOMContentLoaded",function(){bootstrap.ScrollSpy.getInstance(document.body)?.refresh()}),document.querySelectorAll(".hidden-element"));hiddenElements.forEach(e=>observer.observe(e));

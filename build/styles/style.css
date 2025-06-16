@@ -1,8 +1,6 @@
 * {
   padding: 0;
   margin: 0;
-  scroll-behavior: smooth;
-  scroll-padding-top: 57px;
   font-family: "Oswald", sans-serif;
   box-sizing: border-box;
 }
@@ -10,6 +8,7 @@
 html {
   max-width: 100% !important;
   overflow-x: hidden !important;
+  scroll-behavior: smooth;
 }
 
 img {
@@ -62,9 +61,9 @@ img {
   backdrop-filter: blur(10px);
 }
 .btn:hover {
-  background-color: #81beff;
-  outline: #81beff;
-  border: 3.5px solid #81beff;
+  background-color: #55b0fa;
+  outline: #55b0fa;
+  border: 3.5px solid #55b0fa;
   backdrop-filter: blur(10px) !important;
   color: black;
 }
@@ -84,8 +83,8 @@ img {
   background-color: transparent !important;
   outline: none !important;
   box-shadow: none !important;
-  color: #81beff !important;
-  border-color: #81beff !important;
+  color: #55b0fa !important;
+  border-color: #55b0fa !important;
   pointer-events: none !important;
 }
 
@@ -94,6 +93,11 @@ body {
   margin: 0;
   overflow-x: hidden;
   background-color: #1c1c1c;
+  overflow-y: auto;
+  height: auto;
+  background-color: #1c1c1c;
+  background-image: url("../../../build/dist/img/noise_bg.webp");
+  background-repeat: repeat;
 }
 
 @keyframes fade-down {
@@ -241,15 +245,15 @@ header {
   padding-bottom: 0;
 }
 .nav-link:hover {
-  color: #81beff !important;
+  color: #55b0fa !important;
 }
 
 #brand-logo {
-  max-height: 22px;
+  max-height: 32px;
   padding-top: 0px;
   padding-bottom: 0px !important;
+  margin-top: 4px;
   margin-left: 0px;
-  margin-top: 15px;
   height: auto;
   width: auto;
   transition: ease-in-out 0.5s;
@@ -578,7 +582,8 @@ select option[value=""][disabled] {
 #inicio {
   position: relative;
   width: 100%;
-  min-height: calc(100svh - 57px);
+  min-height: 100svh;
+  padding-top: 150px;
 }
 #inicio::before {
   content: "";
@@ -588,8 +593,6 @@ select option[value=""][disabled] {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  filter: blur(10px);
-  opacity: 0.32;
   z-index: -1;
 }
 
@@ -668,7 +671,7 @@ select option[value=""][disabled] {
   display: block;
 }
 .card-hero .card-face.card-front {
-  background: #ff1c1c;
+  background: #363636;
 }
 .card-hero .card-face.card-back {
   background: #3153e9;
@@ -680,7 +683,7 @@ select option[value=""][disabled] {
   left: 55px;
   top: 125px;
   z-index: 1;
-  transform: rotate(-5deg);
+  transform: rotate(-20deg);
 }
 
 .card-2 {
@@ -693,17 +696,17 @@ select option[value=""][disabled] {
   left: 265px;
   top: 215px;
   z-index: 2;
-  transform: rotate(5deg);
+  transform: rotate(20deg);
 }
 
 .avatars {
   display: grid;
-  grid-template-columns: repeat(3, 22px);
+  grid-template-columns: repeat(4, 22px);
   transition: all 0.5s;
   transition-delay: 0.5s;
 }
 .avatars:hover {
-  grid-template-columns: repeat(3, 66px);
+  grid-template-columns: repeat(4, 66px);
   transition-delay: 0s;
 }
 
@@ -798,6 +801,9 @@ select option[value=""][disabled] {
   width: 100%;
   min-height: 550px;
   background-color: #1c1c1c;
+  background-image: url("../../../build/dist/img/noise_bg.webp");
+  background-repeat: repeat;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 #sobre .container-sobre {
   max-width: 100%;
@@ -905,7 +911,9 @@ select option[value=""][disabled] {
 }
 #planos {
   width: 100%;
-  background-color: grey;
+  background-color: #2c2c2c;
+  background-image: url("../../../build/dist/img/noise_bg.webp");
+  background-repeat: repeat;
 }
 #planos .container-plans {
   max-width: 100%;
@@ -964,7 +972,7 @@ select option[value=""][disabled] {
 }
 
 #info {
-  background-color: #2c2c2c;
+  background-color: #242424;
   border-bottom: 3px solid !important;
   border-color: #077afa !important;
   color: #ffffff;
@@ -975,13 +983,13 @@ select option[value=""][disabled] {
 }
 
 #info-container {
-  background-color: #2c2c2c;
+  background-color: #242424;
   color: #ffffff;
-  border-color: #2c2c2c;
+  border-color: #242424;
 }
 
 #footer-foot-note {
-  background-color: #2c2c2c;
+  background-color: #242424;
   padding-bottom: 1rem;
 }
 
@@ -1038,7 +1046,7 @@ select option[value=""][disabled] {
   margin-left: 10px !important;
 }
 #footer-social-links a svg:hover {
-  color: #81beff;
+  color: #55b0fa;
 }
 
 .contact-footer {
