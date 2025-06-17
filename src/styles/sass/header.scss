@@ -11,6 +11,15 @@ header {
     background-color: variables.$headerColor;
 }
 
+.text-logo {
+    align-self: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 24px;
+    color: variables.$primaryColor;
+    font-weight: bolder;
+}
+
 .navbar-wrapper {
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);

@@ -3,9 +3,8 @@
 * {
     padding: 0;
     margin: 0;
-    //scroll-padding-top: 57px;
-    font-family: variables.$secondaryFont;
     box-sizing: border-box;
+    font-family: variables.$tertiaryFont;
 }
 
 html {
@@ -17,3 +16,22 @@ html {
 img {
     -webkit-user-drag: none;
 } 
+
+
+.title-section {
+    color: variables.$primaryColor;
+    transition: ease-in-out 0.5s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+p {
+    font-family: variables.$tertiaryFont;
+    font-size: 1.2rem;
+}
+
+h1, h2, h3, h4, h5, h6, span {
+    font-family: variables.$secondaryFont;
+}

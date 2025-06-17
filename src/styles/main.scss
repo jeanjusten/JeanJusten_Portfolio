@@ -20,8 +20,9 @@
 @use "./sass/sections/plans/plans_hero.scss";
 @use "./sass/sections/plans/plans_sobre.scss";
 @use "./sass/sections/plans/plans_planos.scss";
-
-
+@use "./sass/sections/plans/plans_faq.scss";
+@use "./sass/sections/plans/plans_contato.scss";
+// Footer
 @use "./sass/sections/footer";
 
 // Bootstrap Overwrite Variables

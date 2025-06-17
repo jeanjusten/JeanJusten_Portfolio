@@ -1,0 +1,52 @@
+@use "../../variables";
+@use "../../mixins/mixins";
+
+#faq {
+    max-width: 100%;
+    background-color: variables.$bodyColorSecondary;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+
+    .container-faq-wrapper {
+        max-width: 1080px;
+        
+        .container-faq {
+            max-width: 100%;
+        }
+    }
+}
+
+//Accordions
+.accordion-item {
+    border: transparent;
+    margin-bottom: 10px;
+    background-color: variables.$colorAccordion;
+}
+
+.accordion-button {
+    border: none; 
+    outline: none; 
+    box-shadow: none;
+    background-color: variables.$colorAccordion;
+    color: variables.$textColorSec;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: variables.$primaryColor;
+    color: variables.$textColor; 
+    font-weight: bold;
+}
+
+.accordion-body {
+    background-color: variables.$bodyColorPrimary;
+    color: variables.$textColor;
+}
+
+/*Accordion button to collapse*/
+.accordion-button::after {
+    //filter: brightness(0) invert(1); 
+    transition: transform 0.3s ease; 
+}
+
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(180deg); 
+}

@@ -3,9 +3,8 @@
 
 #contact {
     position: relative;
-    color: var(--colorTextPrimary);
-    background-image: url(./images/noisepattern.webp);
-    background-color: var(--colorBody);
+    color: variables.$textColor;
+    background-color: variables.$bodyColorPrimary;
 
     &::after {
         content: "";

@@ -5,8 +5,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const formattedWhatsappNumber = whatsappNumber.replace(/\D/g, "");
     // Message Plans
     const messagePlans = "Olá! Gostaria de saber mais sobre os posts para Cartórios.";
+        // Message Plans
+    const messagePlanStandard = "Olá! Gostaria de saber mais sobre o Plano Padrão.";
+        // Message Plans
+    const messagePlanAdvanced = "Olá! Gostaria de saber mais sobre o Plano Avançado";
+    // Message Plans
+    const messagePlanElite = "Olá! Gostaria de saber mais sobre o Plano Elite.";
+    // Message Plans
+    const messagePlanFull = "Olá! Gostaria de saber mais sobre o Plano Corporativo.";
+
+    function planMessageFunction(message) {
+        return `https://wa.me/${formattedWhatsappNumber}?text=${encodeURIComponent(message)}`;
+    }
+
     // Whatsapp API number Plans
     const whatsappApiPlans = `https://wa.me/${formattedWhatsappNumber}?text=${encodeURIComponent(messagePlans)}`;
+
     // Instagram
     const instagramUsername = "jeanjusten"
     // Instagram Link
@@ -29,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Instagram Replace
+    // Instagram Replace Message
     [
         "contact-instagram-plans-svg",
         "contact-instagram-plans-footer"
@@ -43,4 +57,50 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
     });
+
+    // Plans Cards Replace Message
+    const planStandard = document.getElementById("plan-standard");
+    const planAdvanced = document.getElementById("plan-advanced");
+    const planElite = document.getElementById("plan-elite");
+    const planFull = document.getElementById("plan-full");
+
+    if (planStandard) {
+        const messageVar = planMessageFunction(messagePlanStandard);
+        planStandard.href = messageVar;
+        // Prevents empty clicks on Plans Links
+        planStandard.addEventListener("click", e => {
+            e.preventDefault();
+            window.open(messageVar, "_blank");
+        });
+    }
+
+    if (planAdvanced) {
+        const messageVar = planMessageFunction(messagePlanAdvanced);
+        planAdvanced.href = messageVar; 
+        // Prevents empty clicks on Plans Links
+        planAdvanced.addEventListener("click", e => {
+            e.preventDefault();
+            window.open(messageVar, "_blank");
+        });
+    }
+
+    if (planElite) {
+        const messageVar = planMessageFunction(messagePlanElite);
+        planElite.href = messageVar;
+        // Prevents empty clicks on Plans Links
+        planElite.addEventListener("click", e => {
+            e.preventDefault();
+            window.open(messageVar, "_blank");
+        });
+    }
+
+    if (planFull) {
+        const messageVar = planMessageFunction(messagePlanFull);
+        planFull.href = messageVar;
+        // Prevents empty clicks on Plans Links
+        planFull.addEventListener("click", e => {
+            e.preventDefault();
+            window.open(messageVar, "_blank");
+        });
+    }
 });
