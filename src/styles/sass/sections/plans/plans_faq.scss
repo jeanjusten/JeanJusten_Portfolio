@@ -32,8 +32,7 @@
 
 .accordion-button:not(.collapsed) {
     background-color: variables.$primaryColor;
-    color: variables.$textColor; 
-    font-weight: bold;
+    color: variables.$textColorSec; 
 }
 
 .accordion-body {

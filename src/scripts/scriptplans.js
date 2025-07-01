@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // WhatsApp Link API Replace Plans Message
     [
         "contact-whatsapp-plans",
+        "contact-whatsapp-form",
         "contact-whatsapp-plans-cta",
         "contact-whatsapp-plans-svg"
     ].forEach(id => {

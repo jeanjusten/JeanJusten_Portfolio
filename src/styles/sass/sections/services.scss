@@ -1,3 +1,7 @@
 @use "../variables";
 @use "../mixins/mixins";
 
+#services {
+    position: relative;
+    width: 100%;
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jean Justen - Front-end Dev.</title>
+    <title>Jean Justen | Front-end Dev.</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta name="author" content="Jean Justen - https://www.jeanjusten.com">
     <!--Descriptions-->
@@ -34,9 +34,12 @@
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Special+Gothic+Condensed+One&display=swap" rel="stylesheet">
     <!--Bootstrap CDNs-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!--CSS CHANGE TO "build/dist/styles/style.css" AFTER GULP CSS SCRIPT--> 
     <link rel="stylesheet" href="build/styles/style.css">
     <!--SCRIPTS-->
@@ -44,10 +47,12 @@
     <script defer src="./build/dist/scripts/script.js"></script>
     <script defer src="./build/dist/scripts/dropdown.js"></script>
     <script defer src="./build/dist/scripts/scrollspy.js"></script>
+    <script defer src="../build/dist/scripts/submitForm.js"></script>
     <script defer src="./build/dist/scripts/parallax.js"></script>
+    <script defer src="./build/dist/scripts/dynamicDescription.js"></script>
 </head>
 <body>
-    <div data-bs-spy="scroll" data-bs-target="#header-nav" data-bs-offset="100" tabindex="0">
+    <div data-bs-spy="scroll" data-bs-target="#header-nav-plans" data-bs-offset="100" tabindex="0">
         <!--PAGE LOADER-->
         <div class="loader">
             <img src="./build/dist/img/logo_loader.webp" alt="logo">
@@ -58,10 +63,8 @@
             <div class="custom-alert-content">
                 <span class="close">&times;</span>
                 <div class="d-flex flex-column justify-content-center">
-                    <!--
-                    <img src="./images/jj_logo.webp" alt="Jean Justen's logo" id="brand-logo-popup" draggable="false" class="pb-1 mb-3">
-                    -->
-                    <p id="alert-message">
+                    <img src="../build/dist/img/logo.webp" alt="Logo de Jean Justen" id="brand-logo-popup" draggable="false" class="pb-1 mb-3">
+                    <p id="alert-message" class="text-center">
                     </p>
                 </div>
             </div>
@@ -72,17 +75,18 @@
             <div class="navbar-wrapper">
                 <div class="navbar navbar-expand-lg" id="header-nav-height">
                     <div class="container pt-1">
-                        <img src="./build/dist/img/logo_esc_white.webp" alt="Logo" id="brand-logo" draggable="false" class="pb-1">
+                        <img src="../build/dist/img/logo.webp" alt="Logo" id="brand-logo" draggable="false" class="pb-1">
+                        <p class="text-center text-logo text-uppercase">Jean Justen</p>
                         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-dropdown">
                         <span class="navbar-toggler-icon"></span>
                         </button>
                         <nav class="collapse navbar-collapse justify-content-end" id="menu-dropdown">
                             <ul class="nav navbar-nav nav-pills">
-                                <li class="nav-item"><a href="#home" class="nav-link active fs-5">home</a></li>
-                                <li class="nav-item"><a href="#about" class="nav-link fs-5">about</a></li>
-                                <li class="nav-item"><a href="#services" class="nav-link fs-5">services</a></li>
-                                <li class="nav-item"><a href="#portfolio" class="nav-link fs-5">portfolio</a></li>
-                                <li class="nav-item"><a href="#contact" class="nav-link fs-5">contact</a></li>
+                                <li class="nav-item"><a href="#home" class="nav-link active fs-5">Home</a></li>
+                                <li class="nav-item"><a href="#about" class="nav-link fs-5">About</a></li>
+                                <li class="nav-item"><a href="#services" class="nav-link fs-5">Services</a></li>
+                                <li class="nav-item"><a href="#portfolio" class="nav-link fs-5">Portfolio</a></li>
+                                <li class="nav-item"><a href="#contact" class="nav-link fs-5">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -92,6 +96,13 @@
 
         <!--HERO SECTION-->
         <main id="home">
+            <video autoplay muted loop playsinline class="bg-video-hero">
+                <!--Smaller devices-->
+                <source src="./build/dist/video/video_bg_low.mp4" type="video/mp4" media="(max-width: 768px)">
+                <!--Standard video quality for bigger screens-->
+                <source src="./build/dist/video/video_bg_720.mp4" type="video/mp4">
+            </video>
+            <div class="video-hero-overlay"></div>
             <div class="banner" id="parallax">
                 <div class="text-hero-wrapper">
                     <div class="container container-parallax">
@@ -102,26 +113,34 @@
                         <div class="bg bg-4"></div>
                         <div class="bg bg-5"></div>
                         <div class="bg bg-6"></div>
-                        <div class="motto d-flex flex-column justify-content-center mx-auto">
-                            <p class="text-start motto-p1">Hello! Im</p>
-                            <h1 class="text-uppercase text-center mx-auto">Jean Justen</h1>
+                        <div class="motto d-flex flex-column justify-content-center mx-auto" id="name-container">
+                            <p class="motto-p1">Hello! Im</p>
+                            <!--
+                            <h1 class="text-uppercase text-center" id="name-parallax">Jean       Justen</h1>
+                            -->
+                            <div class="container-motto-text">
+                                <h1 class="text-uppercase name-parallax">Jean</h1>
+                                <h1 class="text-uppercase name-parallax">Justen</h1>
+                            </div>
                             <p class="text-end motto-p2">Front-end dev.</p>
                         </div>
-                        <div class="bg bg-7 d-flex">
-                            <a href="https://github.com/jeanjusten" target="_blank" title="Github.com/jeanjusten">
-                                <img src="./build/dist/img/card1_back.webp" alt="Github">
+                        <div class="bg bg-7 d-flex hidden-element translate-up">
+                            <a href="https://github.com/jeanjusten" target="_blank" title="Github.com/jeanjusten" class="motto-links">
+                                <img src="./build/dist/img/github_icon.webp" alt="Github">
                             </a>
-                            <a href="https://www.linkedin.com/in/jeanjusten/" target="_blank" title="LinkedIn.com/jeanjusten">
-                                <img src="./build/dist/img/card1_back.webp" alt="LinkedIn">
+                            <a href="https://www.linkedin.com/in/jeanjusten/" target="_blank" title="LinkedIn.com/jeanjusten" class="motto-links">
+                                <img src="./build/dist/img/linkedin_icon.webp" alt="LinkedIn">
                             </a>
-                            <a href="https://www.instagram.com/jeanjusten" target="_blank" title="Instagram.com/jeanjusten">
-                                <img src="./build/dist/img/card1_back.webp" alt="Instagram">
+                            <a href="https://www.instagram.com/jeanjusten" target="_blank" title="Instagram.com/jeanjusten" class="motto-links">
+                                <img src="./build/dist/img/instagram_icon.webp" alt="Instagram">
                             </a>
-                            <a href="https://www.tiktok.com/@jean_justen" target="_blank" title="TikTok.com/@jean_justen">
-                                <img src="./build/dist/img/card1_back.webp" alt="TikTok">
+                            <a href="https://www.tiktok.com/@jean_justen" target="_blank" title="TikTok.com/@jean_justen" class="motto-links">
+                                <img src="./build/dist/img/tiktok_icon.webp" alt="TikTok">
                             </a>
                         </div>
-                        <div class="bg bg-8"></div>
+                        <div class="wrapper-bg-8">
+                            <div class="bg bg-8"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -132,10 +151,11 @@
             <div class="container d-sm-block d-md-block d-lg-flex mt-5">
                 <!--Content-->
                 <div class="">
-                    <div class="container-sections hidden-element translate-left">
+                    <div class="container-sections hidden-element translate-up d-flex flex-column">
+                        <img src="../build/dist/img/logo.webp" alt="Logo" draggable="false" class="img-fluid h2-img mx-auto">
                         <h2 class="text text-center h2 title-rec-bg">About me</h2>
                     </div>
-                    <div class=" hidden-element translate-up">
+                    <div class="hidden-element translate-down">
                         <p class="mx-auto text text center">
                             Hello! My name is <strong>Jean</strong>. Im 33 years old, living in Brazil 🇧🇷. <br>
                         Currently, im a Front-end developer (studying to become a Full-stack), and i have made multiple Landing Pages and personal web-sites as a Freelancer.
@@ -151,10 +171,243 @@
 
         <!--SERVICES SECTION-->
         <section id="services">
+            <div class="container d-sm-block d-md-block d-lg-flex mt-5">
+                <!--Content-->
+                <div class="">
+                    <div class="container-sections hidden-element translate-up d-flex flex-column">
+                        <img src="../build/dist/img/logo.webp" alt="Logo" draggable="false" class="img-fluid h2-img mx-auto">
+                        <h2 class="text text-center h2 title-rec-bg">Services</h2>
+                    </div>
+                    <div class=" hidden-element translate-down">
+                        <p class="mx-auto text text center">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam inventore quas a aliquam. Cum veniam ab officiis modi, 
+                        dolores quas itaque soluta ea atque mollitia omnis, nemo accusantium iste. A nesciunt aspernatur sed at ipsa aperiam dolorum, 
+                        velit fuga natus molestiae laudantium non! Iusto, rem.
+                        </p>
+                    </div>
+
+                    <div class="container-service-cards row g-3 mt-3">
+                        <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center pb-3 hidden-element translate-up">
+                            <a href="https://github.com/jeanjusten/CS50p_Python_Final_Project" alt="See project Repository on Github" target="_blank">
+                                <article class="card-article d-flex flex-column">
+                                    <img src="../build/dist/img/services_1.webp" alt="Jean Justen's Portfolio Project" class="card-article-img" draggable="false">
+                                    <div class="card-article-data">
+                                        <h3 class="card-article-title">
+                                            Web-Design
+                                        </h3>
+                                        <span class="card-article-description">
+                                            Landing Pages, Online stores and big websites.
+                                        </span>
+                                    </div>
+                                </article>
+                            </a>
+                        </div>
+                        <!--2nd Card-->
+                        <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center hidden-element translate-up pb-3">
+                            <a href="https://github.com/jeanjusten/CS50p_Python_P_Sets" alt="See project Repository on Github" target="_blank">
+                                <article class="card-article d-flex flex-column">
+                                    <img src="../build/dist/img/services_2.webp" alt="Jean Justen's Portfolio Project" class="card-article-img" draggable="false">
+                                    <div class="card-article-data">
+                                        <h3 class="card-article-title">
+                                            UI/UX Design
+                                        </h3>
+                                        <span class="card-article-description">
+                                            UI/UX Design using react Native.
+                                        </span>
+                                    </div>
+                                </article>
+                            </a>
+                        </div>
+                        <!--3rd Card-->
+                        <div class="col-sm-12 col-md-12 col-lg-4 d-flex justify-content-center hidden-element translate-up pb-3">
+                            <a href="https://github.com/jeanjusten/My_Phone_List" alt="See project Repository on Github" target="_blank">
+                                <article class="card-article d-flex flex-column">
+                                    <img src="../build/dist/img/services_3.webp" alt="Jean Justen's Portfolio Project" class="card-article-img" draggable="false">
+                                    <div class="card-article-data">
+                                        <h3 class="card-article-title">
+                                            General Frontend Development
+                                        </h3>
+                                        <span class="card-article-description">
+                                            Complete Frontend implementation starting at a creative build level.
+                                        </span>
+                                    </div>
+                                </article>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!--PORTFOLIO SECTION-->
         <section id="portfolio">
+            <!--Content-->
+            <div class="container d-sm-block mt-5">
+                <div class="container-sections hidden-element translate-up d-flex flex-column">
+                    <img src="../build/dist/img/logo.webp" alt="Logo" draggable="false" class="img-fluid h2-img mx-auto">
+                    <h2 class="text text-center h2 title-rec-bg">Meet my Work</h2>
+                </div>
+                <div class=" hidden-element translate-down">
+                    <p class="mx-auto text text center">
+                        Here you can check out the work I've done as a freelancer. Each project reflects my focus on responsive design, and delivering real value to clients.<br>
+                        From institutional websites to interactive applications, this portfolio showcases a variety of solutions built with performance and aesthetics in mind.<br>
+                        You can check out my complete project collection in my 
+                        <a href="https://github.com/jeanjusten" target="_blank" title="Github.com/jeanjusten" class="github-link-portfolio"><strong>Github</strong></a> page.
+                    </p>
+                </div>
+            </div>
+            <!--Projects-->
+            <div class="cards-wrapper d-flex justify-content-center align-items-center">
+                <div class="container-cards d-flex justify-content-start mx-auto">
+                    <!--Project 1-->
+                    <input type="radio" name="slide" id="input-c1" checked>
+                    <label for="input-c1" class="card-portfolio">
+                        <div class="card-row">
+                            <div class="portfolio-icon">1</div>
+                            <a href="https://espacows.com.br/" target="_blank" class="portfolio-card-description">
+                                <h4>Espaço WS</h4>
+                                <p>
+                                    A Webpage for a local clothing store to show their latest collections.
+                                </p>
+                            </a>
+                        </div>
+                    </label>
+                    <!--Project 2-->
+                    <input type="radio" name="slide" id="input-c2">
+                    <label for="input-c2" class="card-portfolio">
+                        <div class="card-row">
+                            <div class="portfolio-icon">2</div>
+                            <a href="https://danicompany.com.br/" target="_blank" class="portfolio-card-description">
+                                <h4>Dani&Co.</h4>
+                                <p>
+                                    A Webpage for a local restaurant with a simple parallax effect.
+                                </p>
+                            </a>
+                        </div>
+                    </label>
+                    <!--Project 3-->
+                    <input type="radio" name="slide" id="input-c3">
+                    <label for="input-c3" class="card-portfolio">
+                        <div class="card-row">
+                            <div class="portfolio-icon">3</div>
+                            <a href="https://moo-dy-spotify-front-end.vercel.app/" target="_blank"  class="portfolio-card-description">
+                                <h4>Moo-dy</h4>
+                                <p>
+                                    Moo-dy is a website that delivers a song based on your current mood.
+                                </p>
+                            </a>
+                        </div>
+                    </label>
+                    <!--Project 4-->
+                    <input type="radio" name="slide" id="input-c4">
+                    <label for="input-c4" class="card-portfolio">
+                        <div class="card-row">
+                        <div class="portfolio-icon">4</div>
+                            <a href="https://www.cartorioribeirao.com.br/" target="_blank" class="portfolio-card-description">
+                                <h4>Cartório Ribeirão</h4>
+                                <p>
+                                    A landing page for a notary located in Florianópolis-SC.
+                                </p>
+                            </a>
+                        </div>
+                    </label>
+                    <!--Project 5-->
+                    <input type="radio" name="slide" id="input-c5">
+                    <label for="input-c5" class="card-portfolio">
+                        <div class="card-row">
+                        <div class="portfolio-icon">5</div>
+                            <a href="https://lucky-draw-lac.vercel.app/" target="_blank" class="portfolio-card-description">
+                                <h4>Lucky Draw</h4>
+                                <p>
+                                    A Random number generator.
+                                </p>
+                            </a>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <!--Project Info-->
+            <div class="container container-description-portfolio mt-5 pb-5 hidden-element translate-up">
+                <div class="wrapper-dynamic-content d-flex flex-column justify-content-around">
+                    <h4 class="text-center">About this project</h4>
+                    <p class="text-start" id="project-description-dynamic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia atque facilis exercitationem! Eaque quod quis illo a, 
+                        doloribus inventore harum est ex, quidem unde architecto, nihil dolorum corrupti aliquid minus quam illum culpa perferendis aliquam quos 
+                        nobis rem reiciendis ducimus. Et rerum, vero, maiores maxime dolores assumenda numquam vitae nesciunt tempore cum tempora labore pariatur 
+                        exercitationem molestiae necessitatibus harum illo!
+                    </p>
+                    <div class="wrapper-icons-portfolio d-flex flex-row justify-content-center gap-5 mx-auto mt-3">
+                        <div class="d-block">
+                            <h6 class="text-center">Stacks used</h6>
+                            <div class="d-flex gap-2 justify-content-center" id="project-stacks-dynamic"></div>
+                        </div>
+                        <div class="d-block">
+                            <h6 class="text-center">Deploy</h6>
+                            <div class="d-flex gap-2 justify-content-center" id="project-deploy-dynamic"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Other Projects-->
+            <div class="container d-block mt-1">
+                <div class=" hidden-element translate-down mx-auto">
+                    <h4 class="text-center">Other Projects</h4>
+                    <p class="mx-auto text text-center">
+                        Other projects worth checking.
+                    </p>
+                </div>
+                <!--1st Card-->
+                <div class="container container-sobre-wrapper d-flex flex-column">
+                    <div class="container-service-cards row g-2 hidden-element translate-up">
+                        <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center pb-5">
+                            <a href="https://github.com/jeanjusten/CS50p_Python_Final_Project" alt="See project Repository on Github" target="_blank">
+                                <article class="card-article d-flex flex-column">
+                                    <img src="../build/dist/img/project_extra1.webp" alt="Jean Justen's Portfolio Project" class="card-article-img" draggable="false">
+                                    <div class="card-article-data">
+                                        <h3 class="card-article-title">
+                                            Harvard's CS50p Python Final Project
+                                        </h3>
+                                        <span class="card-article-description">
+                                            My CS50P's Introduction to Programming with Python final project. Certificate Generator prints a user name and date on a certificate image. 
+                                        </span>
+                                    </div>
+                                </article>
+                            </a>
+                        </div>
+                        <!--2nd Card-->
+                        <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center pb-5">
+                            <a href="https://github.com/jeanjusten/CS50p_Python_P_Sets" alt="See project Repository on Github" target="_blank">
+                                <article class="card-article d-flex flex-column">
+                                    <img src="../build/dist/img/project_extra2.webp" alt="Jean Justen's Portfolio Project" class="card-article-img" draggable="false">
+                                    <div class="card-article-data">
+                                        <h3 class="card-article-title">
+                                            Harvard's CS50p Python Problem Sets
+                                        </h3>
+                                        <span class="card-article-description">
+                                            Here you can see my solved problem sets from the Harvard's CS50p's Introduction to Programming with Python. 
+                                        </span>
+                                    </div>
+                                </article>
+                            </a>
+                        </div>
+                        <!--3rd Card-->
+                        <div class="col-sm-12 col-md-12 col-lg-4 d-flex justify-content-center pb-5">
+                            <a href="https://github.com/jeanjusten/My_Phone_List" alt="See project Repository on Github" target="_blank">
+                                <article class="card-article d-flex flex-column">
+                                    <img src="../build/dist/img/project_extra3.webp" alt="Jean Justen's Portfolio Project" class="card-article-img" draggable="false">
+                                    <div class="card-article-data">
+                                        <h3 class="card-article-title">
+                                            MyPhone List
+                                        </h3>
+                                        <span class="card-article-description">
+                                            A Javascript study project to learn more about logic and DOM manipulation like adding and deleting phone numbers.
+                                        </span>
+                                    </div>
+                                </article>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!--CONTACT SECTION-->
@@ -162,17 +415,21 @@
             <!--Content-->
             <div class="container d-block">
                 <div class="d-flex flex-column">
-                    <div class="container-sections hidden-element translate-down">
+                    <div class="container-sections hidden-element translate-up d-flex flex-column">
+                        <img src="../build/dist/img/logo.webp" alt="Logo" draggable="false" class="img-fluid h2-img mx-auto">
                         <h2 class="text text-center h2 animation-up title-rec-bg">Contact</h2>
                     </div>
-                    <h2 class="mx-auto text text-center h2 hidden-element translate-right">How can i help you?</h2>
-                    <p class="mx-auto text hidden-element translate-right">
+                    <h4 class="mx-auto text text-center h4 hidden-element translate-down">How can i help you?</h4>
+                    <p class="mx-auto text hidden-element translate-down">
                         Send me a message describing what you need.
                     </p>
                 </div>
                 <!--Content-->
                 <div class="container">
-                    <form class="mx-0 form mx-auto animation-up" id="contact-form">
+                    <form action="https://formsubmit.co/jean.cjm@hotmail.com" method="POST" class="mx-0 form mx-auto animation-up" id="contact-form">
+                        <input type="hidden" name="_subject" value="Jean Justen, you have a new Message from your website!">
+                        <input type="hidden" name="_template" value="box">
+                        <input type="hidden" name="_captcha" value="false">
                         <label for="user_name" class="form-label">
                             Name:
                         </label>
@@ -183,7 +440,7 @@
                                         <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
                                     </svg>
                                 </span>
-                                <input type="text" class="form-control" placeholder="Your name here" id="name" name="user_name" title="Insira seu nome completo" minlength="2" required>
+                                <input type="text" class="form-control" placeholder="Your name" id="name" name="Name" title="Insert your full name" minlength="2" required>
                             </div>
                         </div>
                         <label for="user_email" class="form-label">
@@ -196,7 +453,7 @@
                                         <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
                                     </svg>
                                 </span>
-                                <input type="email" class="form-control" placeholder="sample@email.com" id="email" name="user_email" title="Insira seu e-mail" required>
+                                <input type="email" class="form-control" placeholder="example@email.com" id="email" name="E-mail" title="Insert your e-mail" required>
                             </div>
                         </div>
                         <div class="mb-3">
@@ -204,7 +461,7 @@
                                 <label for="message" class="form-label">
                                     Message:
                                 </label>
-                                <textarea class="form-control msg-control" name="message" id="message-area" rows="5" placeholder="Your message here"></textarea>
+                                <textarea class="form-control msg-control" name="Message" id="message-area" rows="5" placeholder="Type your message"></textarea>
                             </div>
                         </div>
                         <div class="d-flex justify-content-center align-items-center">
@@ -222,6 +479,16 @@
                     <span class="follow-us-footer">Follow, or contact me:</span>
                 </div>
                 <div id="footer-social-links">
+                    <a href="https://github.com/jeanjusten" target="_blank" title="Github" id="contact-github-svg" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.074.55-.174.55-.388 0-.19-.007-.693-.01-1.36-2.01.437-2.43-.97-2.43-.97-.364-.924-.89-1.17-.89-1.17-.727-.497.055-.487.055-.487.803.056 1.225.825 1.225.825.714 1.223 1.873.87 2.33.665.072-.517.28-.87.508-1.07-1.6-.182-3.287-.8-3.287-3.558 0-.786.28-1.428.744-1.93-.075-.183-.323-.917.07-1.912 0 0 .61-.196 2 .737a6.94 6.94 0 0 1 1.82-.245c.617.003 1.24.083 1.82.245 1.39-.933 2-.737 2-.737.393.995.145 1.729.07 1.912.464.502.743 1.144.743 1.93 0 2.766-1.688 3.374-3.295 3.553.288.25.543.735.543 1.48 0 1.07-.01 1.93-.01 2.19 0 .215.15.465.55.385A8.001 8.001 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jeanjusten/" target="_blank" title="LinkedIn" id="contact-linkedin-svg" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.473 0 16 .513 16 1.146v13.708c0 .633-.527 1.146-1.175 1.146H1.175C.527 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.213c.837 0 1.358-.554 1.358-1.248-.015-.709-.521-1.248-1.342-1.248C3.1 2.686 2.6 3.225 2.6 3.934c0 .694.52 1.247 1.327 1.247h.016zm4.908 8.213V9.359c0-.203.015-.406.074-.551.162-.406.53-.826 1.148-.826.81 0 1.133.623 1.133 1.538v3.874h2.401V9.26c0-2.22-1.183-3.251-2.76-3.251-1.274 0-1.845.7-2.165 1.193v.026h-.016a5.37 5.37 0 0 1 .016-.026V6.169h-2.4c.03.677 0 7.225 0 7.225h2.4z"/>
+                        </svg>
+                    </a>
                     <a href="javascript:void(0)" target="_blank" title="Instagram" id="contact-instagram-svg" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
                             <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
@@ -232,15 +499,20 @@
                             <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
                         </svg>
                     </a>
+                    <a href="https://www.tiktok.com/@jean_justen" target="_blank" title="TikTok" id="contact-tiktok-svg" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
+                            <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+                        </svg>
+                    </a>
                 </div>
             </section>
             <section id="info-container" class="pt-5">
                 <div class="container text-center text-md-start">
                     <div class="row">
-                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 text-center" id="footer-info">
-                            <img src="./build/dist/img/logo_full_footer.webp" draggable="false" alt="Jean Justen's logo" id="footer-logo">
-                            <p class="text-capitalize mb-4">
-                                Front-End dev.
+                        <div class="col-sm-4 col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 text-center" id="footer-info">
+                            <img src="../build/dist/img/logo.webp" draggable="false" alt="Jean Justen's logo" id="footer-logo">
+                            <p class="text-capitalize mb-4 mt-2">
+                                <strong>Jean Justen</strong><br>Front-End dev.
                             </p>
                         </div>
                         <!--Section Column-->
@@ -259,6 +531,9 @@
                             </p>
                             <p>
                                 <a href="https://www.tiktok.com/@jean_justen" class="text-reset" target="_blank">TikTok</a>
+                            </p>
+                            <p>
+                                <a href="./pages/plans.html" class="text-reset" target="_blank">Plans</a>
                             </p>
                         </div>
                         <!--Section Column-->

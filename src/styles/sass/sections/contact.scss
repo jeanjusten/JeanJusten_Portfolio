@@ -110,3 +110,10 @@ select option[value=""][disabled] {
 #send-form-btn {
     width: 100%;
 }
+
+#contact input:focus,
+#contact textarea:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 129, 44, 0.7);
+    border-color: variables.$primaryColor;
+    outline: none;
+}

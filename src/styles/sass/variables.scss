@@ -1,6 +1,6 @@
 // Primary Colors
-$primaryColor: #077afa;
-$secondaryColor: #55b0fa;
+$primaryColor: #F48C20;
+$secondaryColor: #f5a045;
 // Body Colors
 $bodyColorPrimary: #1c1c1c;
 $bodyColorSecondary: #2c2c2c; 
@@ -13,6 +13,8 @@ $textColorAlternate: #dfdfdf;
 $mainFont: "Special Gothic Condensed One", sans-serif;
 $secondaryFont: "Oswald", sans-serif;
 $tertiaryFont: "Kanit", sans-serif;
+// Spinner - Loader Form
+$spinnerColor: white;
 // Header Colors
 $headerColor: #1c1c1c;
 $headerColorSmall: #1c1c1c;
@@ -37,13 +39,16 @@ $column-size-hover: calc($avatar-size * 1.5);
 $colorAvatarBorder: $textColor;
 $colorAvatarBorderActive: $primaryColor;
 $colorAvatarText: $primaryColor;
+// Portfolio
+$textPortfolioDesc: #b0b0ba;
+$containerDescColor: #4b4b4b;//$primaryColor;
 // Footer Colors
 $colorFooterPrimary: #242424; 
 $colorFooterSec: $primaryColor;
 $colorFooterBorder: #d3d3d3;
 $colorFooterText: #ffffff;
 $devbyColor: #fbfbfb;
-$devbyColorHover: #2e86f3;
+$devbyColorHover: $primaryColor;
 // SVG Colors
 $svgColor: $primaryColor;
 $svgColorSec: $textColor;
@@ -73,6 +78,6 @@ $colorMottoPlans: $primaryColor;
 // Hero Cards Colors
 $colorCardHeroText: $textColor;
 $colorCardHeroBg: #363636;
-$colorCardHeroBg2:#3153e9;
+$colorCardHeroBg2:$primaryColor;
 // FAQ Accordion Colors
 $colorAccordion: #d0d0d0;

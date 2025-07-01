@@ -11,6 +11,7 @@ html {
     max-width: 100% !important;
     overflow-x: hidden !important;
     scroll-behavior: smooth;
+    scroll-padding-top: 70px;
 }
 
 img {
@@ -34,4 +35,25 @@ p {
 
 h1, h2, h3, h4, h5, h6, span {
     font-family: variables.$secondaryFont;
+}
+
+
+.title-rec-bg {
+    color: variables.$primaryColor;
+    transition: ease-in-out 0.5s;
+
+    &:hover {
+        transform: scale(1.05);
+        color: variables.$secondaryColor;
+    }
+}
+
+.h2-img {
+    max-height: 35px;
+    width: auto;
+    transition: ease-in-out 0.5s;
+
+    &:hover {
+        transform: scale(1.1) translateY(-8px);
+    }
 }

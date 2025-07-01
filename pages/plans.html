@@ -45,6 +45,7 @@
     <script defer src="../build/dist/scripts/scriptplans.js"></script>
     <script defer src="../build/dist/scripts/scrollspy.js"></script>
     <script defer src="../build/dist/scripts/dropdown.js"></script>
+    <script defer src="../build/dist/scripts/submitForm.js"></script>
     <script defer src="../build/dist/scripts/loader.js"></script>
 </head>
 <body>
@@ -54,13 +55,25 @@
             <img src="../build/dist/img/logo_loader.webp" alt="Loading...."/>
         </div>
 
+        <!--ALERT BOX-->
+        <div id="custom-alert-box" class="custom-alert">
+            <div class="custom-alert-content">
+                <span class="close">&times;</span>
+                <div class="d-flex flex-column justify-content-center">
+                    <img src="../build/dist/img/logo.webp" alt="Logo de Jean Justen" id="brand-logo-popup" draggable="false" class="pb-1 mb-3">
+                    <p id="alert-message" class="text-center">
+                    </p>
+                </div>
+            </div>
+        </div>
+
         <!--NAVBAR ACTIVE LINK SPY-->
         <header id="header-nav-plans">
             <div class="navbar-wrapper">
                 <div class="navbar navbar-expand-lg" id="header-nav-height">
                     <div class="container pt-1">
                         <img src="../build/dist/img/logo.webp" alt="Logo" id="brand-logo" draggable="false" class="pb-1">
-                        <p class="text-center text-logo text-uppercase">Jean Justen - Frontend dev.</p>
+                        <p class="text-center text-logo text-uppercase">Jean Justen</p>
                         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-dropdown">
                         <span class="navbar-toggler-icon"></span>
                         </button>
@@ -71,6 +84,7 @@
                                 <li class="nav-item"><a href="#planos" class="nav-link fs-5">Planos</a></li>
                                 <li class="nav-item"><a href="#faq" class="nav-link fs-5">FAQ</a></li>
                                 <li class="nav-item"><a href="#contato" class="nav-link fs-5">Contato</a></li>
+                                <li class="nav-item"><a href="../index.html" class="nav-link fs-5">Front-end</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -87,7 +101,7 @@
                 <source src="../build/dist/video/video_bg_plans_low.mp4" type="video/mp4">
             </video>
             <div class="video-overlay"></div>
-            <div class="container container-plans d-sm-flex flex-sm-column d-md-flex flex-md-row justify-content-sm-center justify-content-md-around mx-auto gap-5 pt-2 mt-5">
+            <div class="container container-plans d-sm-flex flex-sm-column d-md-flex flex-md-row justify-content-sm-center justify-content-md-around mx-auto gap-5 pt-2 mt-3">
                 <!--Left Content-->
                 <div class="container-cta-left text-center text-sm-center text-md-start d-sm-flex flex-column d-md-block justify-content-center">
                     <div class="hidden-element translate-down">
@@ -134,7 +148,7 @@
                     </div>
                 </div>
                 <!--Right Content-->
-                <div class="container-cards d-flex justify-content-center hidden-element translate-up">
+                <div class="container-cards d-none d-md-flex justify-content-center hidden-element translate-up">
                     <!-- Card 1 -->
                     <div class="card-hero card-1">
                         <div class="card-inner">
@@ -179,8 +193,8 @@
                     <h2 class="text-uppercase mt-5 title-section">• Conheça o Serviço</h2>
                     <p>
                         Com os pacotes de posts prontos para Instagram, você tem praticidade, constância e cria uma imagem profissional para seu cartório.<br>
-                        Você só precisa aderir ao pacote de posts de sua preferência, e escolher entre os temas disponíveis. Pronto!
-                        Você receberá a imagem pronta para ser postada, junto com a legenda para o post.<br>
+                        Você só precisa aderir ao pacote de posts de sua preferência, e então
+                        receberá a imagem pronta para ser postada, junto com a legenda completa.
                         Assim, você mantém o perfil do seu cartório sempre ativo e informativo — sem precisar gastar tempo criando conteúdo.<br>
                         <br>Passe o mouse / dedo sob os cards abaixo e veja algumas das muitas vantagens ofertadas pelo serviço.
                     </p>
@@ -195,7 +209,7 @@
                                     Praticidade
                                 </h3>
                                 <span class="card-article-description">
-                                    Você só escolhe o tema, e pronto. Receba o post para ser publicado, com imagem e legenda profissional incluídas.
+                                    Você só escolhe o tema, e pronto. Receba o post para ser publicado, com sua logo no conteúdo e legenda profissional inclusa.
                                 </span>
                             </div>
                         </article>
@@ -238,11 +252,7 @@
                 <div class="container-sobre mb-3 hidden-element translate-down">
                     <h2 class="text-uppercase mt-5 title-section">• Escolha o melhor plano para você</h2>
                     <p>
-                        Com os pacotes de posts prontos para Instagram, você tem praticidade, constância e cria uma imagem profissional para seu cartório.<br>
-                        Você só precisa aderir ao pacote de posts de sua preferência, e escolher entre os temas disponíveis. Pronto!
-                        Você receberá a imagem pronta para ser postada, junto com a legenda para o post.<br>
-                        Assim, você mantém o perfil do seu cartório sempre ativo e informativo — sem precisar gastar tempo criando conteúdo.<br>
-                        <br>Passe o mouse / dedo sob os cards abaixo e veja algumas das muitas vantagens ofertadas pelo serviço.
+                        Escolha o plano que melhor atende suas necessidades. Cancele quando quiser.
                     </p>
                 </div>
             </div>
@@ -262,8 +272,8 @@
                             <div>✔️ Temas pré selecionados</div>
                             <div>✔️ Feed simples ou Story</div>
                             <div>✔️ Legendas Personalizadas</div>
-                            <div class="greyed">❌ Posts personalizados</div>
                             <div class="greyed">❌ Posts Carrossel</div>
+                            <div class="greyed">❌ Posts personalizados</div>
                             <div class="greyed">❌ Revisões</div>
                             <div class="greyed">❌ Edição de Reels</div>
                         </div>
@@ -288,8 +298,8 @@
                             <div>✔️ 8 Posts por mês</div>
                             <div>✔️ Temas pré selecionados</div>
                             <div>✔️ Feed simples ou Story</div>
-                            <div>✔️ Posts Carrossel</div>
                             <div>✔️ Legendas Personalizadas</div>
+                            <div>✔️ Posts Carrossel</div>
                             <div class="greyed">❌ Posts personalizados</div>
                             <div class="greyed">❌ Revisões</div>
                             <div class="greyed">❌ Edição de Reels</div>
@@ -316,9 +326,9 @@
                             <div>✔️ Temas personalizados</div>
                             <div>✔️ Feed, Story ou Reels</div>
                             <div>✔️ Edição de Reels</div>
+                            <div>✔️ Posts Carrossel</div>
                             <div>✔️ Revisões Ilimitadas</div>
                             <div>✔️ Legendas Personalizadas</div>
-                            <div> </div>
                             <div> </div>
                         </div>
                         <div class="container-price-button">
@@ -343,9 +353,9 @@
                             <div>✔️ Temas personalizados</div>
                             <div>✔️ Feed, Story ou Reels</div>
                             <div>✔️ Edição de Reels</div>
+                            <div>✔️ Posts Carrossel</div>
                             <div>✔️ Revisões Ilimitadas</div>
                             <div>✔️ Legendas Personalizadas</div>
-                            <div> </div>
                             <div> </div>
                         </div>
                         <div class="container-price-button">
@@ -373,12 +383,12 @@
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                Pergunta 1
+                                Em quanto tempo recebo o primeiro post após contratar o plano?
                                 </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                Resposta 1
+                                O primeiro post será entregue em até 3 dias úteis após a confirmação do pagamento e a seleção do tema inicial disponível.
                                 </div>
                             </div>
                         </div>
@@ -386,12 +396,13 @@
                             <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Pergunta 2
+                                Posso sugerir os temas dos posts?
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    Resposta 2
+                                    Sim! Dependendo do plano escolhido, os posts são entregues sem direito a revisões ou alterações.<br>
+                                    No entanto, você pode escolher o tema de cada semana.
                                 </div>
                             </div>
                         </div>
@@ -399,12 +410,12 @@
                             <h2 class="accordion-header" id="headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Pergunta 3
+                                Como funciona o pagamento?
                                 </button>
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                Resposta 3
+                                O pagamento é mensal, mediante assinatura do contrato.
                                 </div>
                             </div>
                         </div>
@@ -412,12 +423,12 @@
                             <h2 class="accordion-header" id="headingFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                Pergunta 4
+                                Os posts são exclusivos?
                                 </button>
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                Resposta 4
+                                Sim! Os temas podem ou não se sobrepor com outras páginas parceiras, mas o conteúdo sempre será ÚNICO para você.
                                 </div>
                             </div>
                         </div>
@@ -425,12 +436,13 @@
                             <h2 class="accordion-header" id="headingFive">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                Pergunta 5
+                                Posso cancelar a hora que eu quiser?
                                 </button>
                             </h2>
                             <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                Resposta 5
+                                Sim! Você pode cancelar o seu plano a hora que desejar, sem aviso prévio.<br>
+                                O valor será cobrado proporcionalmente ao conteúdo já entregue.
                                 </div>
                             </div>
                         </div>
@@ -445,11 +457,15 @@
                 <div class="container-contato mb-3 hidden-element translate-down">
                     <h2 class="text-uppercase mt-5 title-section">• Contato</h2>
                     <p>
-                        Ainda com alguma dúvida? Envie sua mensagem ou entre em contato comigo através do meu Whatsapp.
+                        Ainda com alguma dúvida? Envie sua mensagem ou entre em contato comigo através do meu 
+                        <a href="javascript:void(0)" id="contact-whatsapp-form" class="text-reset" target="_blank">Whatsapp</a>.
                     </p>
                 </div>
                 <div class="container">
-                    <form class="mx-0 form mx-auto animation-up" id="contact-form">
+                    <form action="https://formsubmit.co/jean.cjm@hotmail.com" method="POST" class="mx-0 form mx-auto animation-up" id="contact-form">
+                        <input type="hidden" name="_subject" value="Jean Justen, you have a new Message from your website!">
+                        <input type="hidden" name="_template" value="box">
+                        <input type="hidden" name="_captcha" value="false">
                         <label for="user_name" class="form-label">
                             Nome:
                         </label>
@@ -460,7 +476,7 @@
                                         <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
                                     </svg>
                                 </span>
-                                <input type="text" class="form-control" placeholder="Nome completo" id="name" name="user_name" title="Insira seu nome completo" minlength="2" required>
+                                <input type="text" class="form-control" placeholder="Nome completo" id="name" name="Name" title="Insira seu nome completo" minlength="2" required>
                             </div>
                         </div>
                         <label for="user_email" class="form-label">
@@ -473,7 +489,7 @@
                                         <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
                                     </svg>
                                 </span>
-                                <input type="email" class="form-control" placeholder="exemplo@email.com" id="email" name="user_email" title="Insira seu e-mail" required>
+                                <input type="email" class="form-control" placeholder="exemplo@email.com" id="email" name="E-mail" title="Insira seu e-mail" required>
                             </div>
                         </div>
                         <div class="mb-3">
@@ -481,7 +497,7 @@
                                 <label for="message" class="form-label">
                                     Mensagem:
                                 </label>
-                                <textarea class="form-control msg-control" name="message" id="message-area" rows="5" placeholder="Digite sua mensagem"></textarea>
+                                <textarea class="form-control msg-control" name="Message" id="message-area" rows="5" placeholder="Digite sua mensagem"></textarea>
                             </div>
                         </div>
                         <div class="d-flex justify-content-center align-items-center">

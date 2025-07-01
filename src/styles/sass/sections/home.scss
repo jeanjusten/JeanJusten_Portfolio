@@ -2,13 +2,35 @@
 @use "../mixins/mixins";
 
 #home {
-    background-color: variables.$bodyColorPrimary;
+    position: relative;
+    width: 100%;
+    height: calc(100svh);
+    overflow: hidden;
+}
+
+.bg-video-hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100svh;
+    object-fit: cover;
+    z-index: -2;
+    pointer-events: none;
+}
+
+.video-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: -1; 
+    pointer-events: none;
 }
 
 .banner {
     display: flex;
     justify-content: space-around;
-    height: calc(100svh);
+    height: 100svh;
     width: 100vw;
     position: relative;
     overflow: hidden;
@@ -16,9 +38,13 @@
 
 .motto {
     position: absolute;
-    bottom: 22%;
-    left: 8%;
+    bottom: 30%;
+    left: 11.5%;
     text-align: center;
+
+    .name-parallax {
+        text-wrap: nowrap;
+    }
 
     h1 {
         line-height: 0.6;
@@ -35,6 +61,7 @@
     }
 
     .motto-p1 {
+        text-align: start;
         padding-left: 3.5rem;
         line-height: 1;
         font-weight: 800;
@@ -57,13 +84,30 @@
     width: 100%;
     position: relative;
     overflow: hidden;
-    background-image: url(../../../build/dist/img/background_hero.webp);
+    //background-image: url(../../../build/dist/img/background_hero.webp);
     background-size: cover;
     background-position: center;
 }
 
-.container-parallax {
+.motto-links {
+    transition: ease-in-out 0.5s;
+    filter: none;
 
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.container-motto-text {
+    display: flex;
+    flex-direction: row; 
+
+    h1:first-of-type {
+        margin-right: 235px;
+    }
+}
+
+.container-parallax {
     .bg {
         position: absolute;
         left: 0;
@@ -74,6 +118,10 @@
         background-position: center bottom;
         background-repeat: no-repeat;
         transition: 0.5s;
+
+        overflow: visible !important;
+        padding-inline: 0 !important;
+        margin-inline: 0 !important;
     }
 
     .bg-1 {
@@ -86,31 +134,35 @@
         pointer-events: none;
     }
 
+    
     .bg-3 {
+        background-image: url(../../../build/dist/img/parallax_6.webp);
+        pointer-events: none;
+    }
+
+    /*
+    .bg-4 {
+        background-image: url(../../../build/dist/img/parallax_5.webp);
+        pointer-events: none;
+    }
+    */
+    .bg-5 {
         background-image: url(../../../build/dist/img/parallax_3.webp);
         pointer-events: none;
     }
 
-    .bg-4 {
-        background-image: url(../../../build/dist/img/parallax_4.webp);
-        pointer-events: none;
-    }
-
-    .bg-5 {
-        background-image: url(../../../build/dist/img/parallax_5.webp);
-        pointer-events: none;
-    }
-
+    /*
     .bg-6 {
-        background-image: url(../../../build/dist/img/parallax_6.webp);
+        background-image: url(../../../build/dist/img/parallax_7.webp);
         pointer-events: none;
     }
+    */
 
     .bg-7 {
         gap: 8px;
         position: absolute;
         left: 15%;
-        top: 70%;
+        top: 65%;
         // background-image: url(../../../build/dist/img/parallax_7.webp);
         // pointer-events: none;
         a img {
@@ -119,7 +171,443 @@
     }
 
     .bg-8 {
+        position: absolute;
+        left: -2.5%;
         background-image: url(../../../build/dist/img/parallax_8.webp);
         pointer-events: none;
+    }
+}
+
+// Media Queries
+@media (max-width: 1750px) {
+    .name-parallax {
+        font-size: 10rem !important;
+    }
+
+    .motto {
+        bottom: 30%;
+        left: 10.5% !important;
+    }
+    
+    .bg-8 {
+        max-height: 90%;
+        left: -6% !important;
+    }
+
+    .container-motto-text {
+        display: flex;
+        flex-direction: row; 
+
+        h1:first-of-type {
+            margin-right: 195px;
+        }
+    }
+}
+
+@media (max-width: 1650px) {
+    .bg-8 {
+        max-height: 90%;
+        left: -3% !important;
+    }
+
+    .container-motto-text {
+        display: flex;
+        flex-direction: row; 
+    }
+}
+
+@media (max-width: 1450px) {
+    .name-parallax {
+        font-size: 8rem !important;
+    }
+
+    .motto {
+        bottom: 40%;
+        left: 10.5% !important;
+    }
+
+    .motto-p1 {
+        font-size: 1.8rem !important;
+        text-align: start;
+        padding-left: 2.3rem !important;
+    }
+
+    .motto-p2 {
+        font-size: 2.5rem !important;
+    }
+
+    .bg-7 {
+        left: 12% !important;
+        top: 52.5% !important;
+
+        a img {
+            max-height: 35px !important;
+            filter: none;
+        }
+    }
+
+    .bg-8 {
+        max-height: 98%;
+        left: -1.5% !important;
+    }
+
+    .container-motto-text {
+        display: flex;
+        flex-direction: row;
+
+        h1:first-of-type {
+            margin-right: 185px;
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    .motto {
+        bottom: 37%;
+        left: 6.2% !important;
+    }
+
+    .motto-p1 {
+        font-size: 1.8rem !important;
+        padding-left: 2rem !important;
+        text-align: start;
+    }
+
+    .motto-p2 {
+        font-size: 2rem !important;
+    }
+
+    .bg-7 {
+        left: 10% !important;
+        top: 56.5% !important;
+
+        a img {
+            max-height: 35px !important;
+            filter: none;
+        }
+    }
+
+    .bg-8 {
+        max-height: 96%;
+        left: -3% !important;
+    }
+
+    .container-motto-text {
+        display: flex;
+        flex-direction: row; 
+    }
+}
+
+@media (max-width: 1180px) {
+    .name-parallax {
+        font-size: 6rem !important;
+    }
+
+    .motto {
+        bottom: 37%;
+        left: 6.2% !important;
+    }
+
+    .motto-p1 {
+        font-size: 1.8rem !important;
+        padding-left: 2rem !important;
+        text-align: start;
+    }
+
+    .motto-p2 {
+        font-size: 2rem !important;
+    }
+
+    .bg-7 {
+        left: 10% !important;
+        top: 56% !important;
+
+        a img {
+            max-height: 35px !important;
+            filter: none;
+        }
+    }
+
+    .bg-8 {
+        max-height: 90%;
+        left: -5.6% !important;
+    }
+
+    .container-motto-text {
+        display: flex;
+        flex-direction: row;
+
+        h1:first-of-type {
+            margin-right: 225px;
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    .bg-8 {
+        max-height: 93%;
+        left: -3% !important;
+    }
+}
+
+@media (max-width: 930px) {
+    .name-parallax {
+        font-size: 6rem !important;
+    }
+
+    .motto {
+        bottom: 42%;
+        margin: 0 auto !important;
+        padding-inline: 0 !important;
+        left: 4.5% !important;
+    }
+
+    .motto-p1 {
+        font-size: 1.8rem !important;
+        padding-left: 1.8rem !important;
+        text-align: start;
+    }
+
+    .bg-7 {
+        left: 8% !important;
+        top: 52% !important;
+    }
+
+    .bg-8 {
+        max-height: 86%;
+        left: -2% !important;
+    }
+
+    .container-motto-text {
+        display: flex;
+        flex-direction: row;
+
+        h1:first-of-type {
+            margin-right: 155px;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .motto {
+        bottom: 40%;
+        margin: 0 auto !important;
+        padding-inline: 0 !important;
+        left: 13% !important;
+    }
+
+    .motto-p1 {
+        font-size: 1.2rem !important;
+        padding-left: 1.2rem !important;
+        text-align: center !important;
+    }
+
+    .motto-p2 {
+        font-size: 1.2rem !important;
+        padding-top: 1.8rem;
+    }
+
+    .bg-7 {
+        left: 15%;
+        top: 53% !important;
+
+        a img {
+            display: none;
+        }
+    }
+
+    .bg-8 {
+        max-height: 75%;
+        left: 3% !important;
+    }
+
+    #name-container {
+        padding-bottom: 2.3rem;
+    }
+
+    .container-motto-text {
+        display: flex;
+        flex-direction: column;
+    
+        h1 {
+            font-size: 8rem !important;
+        }
+
+        h1:first-of-type {
+            padding-bottom: 2.8rem;
+            margin-right: 145px;
+        }
+
+        h1:nth-of-type(2) {
+            line-height: 1.2rem;
+        }
+    }
+}
+
+@media (max-width: 610px) {
+    .name-parallax {
+        font-size: 3rem !important;
+    }
+
+    .motto {
+        bottom: 40%;
+        left: 15.5% !important;
+    }
+
+    .motto-p1 {
+        font-size: 1.2rem !important;
+        padding-left: 1.2rem !important;
+    }
+
+    .motto-p2 {
+        font-size: 1.2rem !important;
+    }
+
+    .bg-7 {
+        left: 15%;
+        top: 56% !important;
+    }
+
+    .bg-8 {
+        max-height: 73%;
+    }
+
+    .container-motto-text {
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            font-size: 6rem !important;
+        }
+
+        h1:first-of-type {
+            padding-bottom: 2.8rem;
+            margin-right: 0;
+        }
+
+        h1:nth-of-type(2) {
+            line-height: 1.2rem;
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    .name-parallax {
+        font-size: 2rem !important;
+    }
+
+    .motto {
+        bottom: 40%;
+        left: 11.5% !important;
+    }
+
+    .bg-8 {
+        max-height: 71%;
+    }
+}
+
+@media (max-width: 480px) {
+    .motto {
+        bottom: 43.5%;
+        left: 7% !important;
+        margin: 0 auto !important;
+    }
+
+    .motto-p1 {
+        font-size: 1.25rem !important;
+    }
+
+    .motto-p2 {
+        font-size: 1.25rem !important;
+    }
+
+    .bg-8 {
+        max-height: 78.5%;
+        transform: translateX(-3%) !important;
+    }
+}
+
+@media (max-width: 410px) {
+    .motto {
+        bottom: 43.5%;
+        left: 3.5% !important;
+        margin: 0 auto !important;
+    }
+
+    .name-parallax {
+        font-size: 0.7rem !important;
+    }
+
+    
+    .motto-p1 {
+        font-size: 0.9rem !important;
+        padding-left: 0.8rem !important;
+        line-height: 0px;
+        margin-bottom: 8px;
+    }
+
+    .motto-p2 {
+        font-size: 1rem !important;
+        line-height: 10px;
+    }
+
+    .bg-8 {
+        max-height: 78.5%;
+        left: 8% !important;
+        transform: translateX(-8%) !important;
+    }
+}
+
+@media (max-width: 380px) {
+    .name-parallax {
+        font-size: 0.95rem !important;
+    }
+
+    .motto {
+        left: 13% !important;
+        bottom: 49.2%;
+    }
+
+    .motto-p1 {
+        font-size: 0.9rem !important;
+        padding-left: 0.8rem !important;
+        line-height: 12px;
+        margin-bottom: 4px;
+    }
+
+    .motto-p2 {
+        font-size: 0.65rem !important;
+        line-height: 0px;
+        padding-top: 16px;
+        margin: 0;
+    }
+
+    .bg-8 {
+        overflow-x: visible !important;
+        transform: translateX(-12%) !important;
+        display: block;
+        max-height: 78.5%;
+        left: 12% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .container-motto-text {
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            font-size: 4.2rem !important;
+        }
+
+        h1:first-of-type {
+            padding-bottom: .8rem;
+            margin-right: 0;
+        }
+
+        h1:nth-of-type(2) {
+            line-height: 1.9rem;
+        }
     }
 }
