@@ -47,7 +47,6 @@ h1, h2, h3, h4, h5, h6, span {
   width: auto;
   transition: ease-in-out 0.5s;
 }
-
 .h2-img:hover {
   transform: scale(1.1) translateY(-8px);
 }
@@ -1054,6 +1053,7 @@ header {
 }
 
 .wrapper-icons-portfolio {
+  max-width: 800px;
   border: 3px solid grey;
   padding: 0.8rem;
   border-radius: 15px;
@@ -1278,7 +1278,6 @@ select option[value=""][disabled] {
   position: relative;
   width: 100%;
   min-height: 100svh;
-  padding-top: 150px;
   overflow: hidden;
 }
 #inicio::after {
@@ -1324,7 +1323,7 @@ select option[value=""][disabled] {
 .container-cta-left {
   position: relative;
   width: 50%;
-  margin: 10% auto;
+  margin: 15% auto;
 }
 .container-cta-left .container-cta-plans {
   margin: 0;
@@ -1345,10 +1344,8 @@ select option[value=""][disabled] {
 .container-cards {
   position: relative;
   width: 50%;
-  margin-top: 3%;
   min-height: 550px;
-  margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 6rem;
 }
 
 .card-hero {

@@ -5,7 +5,6 @@
     position: relative;
     width: 100%;
     min-height: 100svh;
-    padding-top: 150px;
     overflow: hidden;
 
     &::after {
@@ -53,7 +52,7 @@
 .container-cta-left {
     position: relative;
     width: 50%;
-    margin: 10% auto;
+    margin: 15% auto;
 
     .container-cta-plans {
         margin: 0;
@@ -78,10 +77,8 @@
 .container-cards {
     position: relative;
     width: 50%;
-    margin-top: 3%;
     min-height: 550px;
-    margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 6rem;
 }
 
 .card-hero {
